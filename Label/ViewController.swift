@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .orange
         view.layer.shadowRadius = 8
         view.layer.shadowOffset = CGSize(width: 3, height: 3)
+        view.layer.shadowOpacity = 0.5
         view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -124,12 +125,19 @@ class ViewController: UIViewController {
         ]
         
         let mainViewConstraints = [
+            mainView.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 50),
+            mainView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            mainView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            mainView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+//            mainView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.5),
+//            mainView.widthAnchor.constraint(equalToConstant: view.frame.width * 0.7)
         ]
         
         NSLayoutConstraint.activate(addButtonConstraints)
         NSLayoutConstraint.activate(emailTextFieldConstraints)
         NSLayoutConstraint.activate(passwwordTextFieldConstraints)
         NSLayoutConstraint.activate(profileImageViewConstraints)
+        NSLayoutConstraint.activate(mainViewConstraints)
         
     }
 
