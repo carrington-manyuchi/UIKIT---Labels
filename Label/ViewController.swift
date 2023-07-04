@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         textField.layer.cornerRadius = 8
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderColor = UIColor(red: 0.82, green: 0.96, blue: 0.75, alpha: 1.00).cgColor
         textField.layer.borderWidth = 1
         return textField
     }()
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         textField.layer.cornerRadius = 8
         textField.layer.borderWidth = 1
         textField.layer.masksToBounds = false
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderColor = UIColor(red: 0.82, green: 0.96, blue: 0.75, alpha: 1.00).cgColor
         textField.backgroundColor = .secondarySystemBackground
         
         return textField
